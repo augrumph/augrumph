@@ -4,7 +4,7 @@
   
   ### 🌐 [English](#english) | [Português](#português)
   
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=Full-Stack+Engineer+%7C+Data+Enthusiast;Building+Scalable+Solutions+%40+Grupo+Marista;React+%2B+TypeScript+%2B+Java+%2B+Python;Turning+Data+into+Decisions+%F0%9F%93%8A" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=Full-Stack+Engineer+%7C+Data+Enthusiast;Building+Scalable+Solutions+%40;React+%2B+TypeScript+%2B+Java+%2B+Python;Turning+Data+into+Decisions+%F0%9F%93%8A" alt="Typing SVG" />
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/augusto-luzzi/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/augrumph)
