@@ -2,12 +2,18 @@
   
   # Hey there! I'm Augusto Luzzi 👨‍💻✨
   
+  ### 🌐 [English](#english) | [Português](#português)
+  
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=Full-Stack+Engineer+%7C+Data+Enthusiast;Building+Scalable+Solutions+%40+Grupo+Marista;React+%2B+TypeScript+%2B+Java+%2B+Python;Turning+Data+into+Decisions+%F0%9F%93%8A" alt="Typing SVG" />
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/augusto-luzzi/)
   [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seu-email@example.com)
   
 </div>
+
+---
+
+<div id="english">
 
 ## 🎯 TL;DR
 
@@ -34,6 +40,40 @@ Started my journey in **Data Science at BRF**, where I discovered my superpower:
 - 👔 **VP** - Software Engineering Academic Center (2 years)
 - 🚀 **Active Member** - PUCPR-SPINE Entrepreneurship Hub
 - 📊 **Data Background** - Transforming metrics into business decisions
+
+</div>
+
+---
+
+<div id="português">
+
+## 🎯 Resumo
+
+```javascript
+const augusto = {
+  cargo: "Engenheiro de Software @ Grupo Marista",
+  localização: "Curitiba, PR 🇧🇷",
+  experiência: "2+ anos",
+  mentalidade: "Orientado a startups 🚀",
+  superpoder: "Conectar engenharia com insights de dados 📊",
+  estudandoAtualmente: "Arquiteturas cloud-native",
+  procurando: "Oportunidades para combinar dev full-stack com inovação em dados"
+};
+```
+
+## 💫 Sobre Mim
+
+> **"Enquanto a maioria dos devs entrega código, eu entrego inteligência."**
+
+Comecei minha jornada em **Data Science na BRF**, onde descobri meu superpoder: conectar engenharia e análise de dados. Hoje, desenvolvo aplicações web e mobile que não apenas funcionam — elas geram insights que impactam milhares de usuários.
+
+### 🏆 Destaques
+- 🥇 **Vencedor** - Hackathon HIPUC de Inovação em Saúde
+- 👔 **VP** - Centro Acadêmico de Engenharia de Software (2 anos)
+- 🚀 **Membro Ativo** - Núcleo de Empreendedorismo PUCPR-SPINE
+- 📊 **Background em Dados** - Transformando métricas em decisões de negócio
+
+</div>
 
 ## 🛠️ Tech Stack
 
@@ -64,82 +104,29 @@ Started my journey in **Data Science at BRF**, where I discovered my superpower:
 
 </div>
 
-## 📈 What Makes Me Different
-
-```mermaid
-graph LR
-    A[Software Engineering] --> C[Unique Value]
-    B[Data Science Background] --> C
-    C --> D[Data-Driven Development]
-    D --> E[Business Impact Measurement]
-    D --> F[Feature Optimization]
-    D --> G[User Insight Generation]
-```
-
-## 🎓 Education & Achievements
-
-- **B.S. Software Engineering** - PUCPR (2020-2023) | GPA: 10/10 🎯
-- **Leadership** - VP of Academic Center, organizing tech events & workshops
-- **Innovation** - Hackathon winner focusing on healthcare solutions
-- **Community** - Active in entrepreneurship initiatives and tech talks
-
-## 💼 Professional Journey
-
-### Software Engineer @ Grupo Marista
-*Sep 2023 - Present*
-- Building scalable web and mobile applications impacting thousands of users
-- Full-stack development with Java Spring Boot, Node.js, React.js
-- Implementing CI/CD pipelines with Azure DevOps
-- Creating data-driven dashboards and KPIs with Power BI
-
-### Previous Experience
-- **Software Engineering Intern** @ Grupo Marista (Sep 2022 - Sep 2023)
-- **Data Science Intern** @ BRF (Aug 2021 - Feb 2022)
-
-## 🌱 Currently Exploring
-
-- 🏗️ Cloud-native architectures and microservices
-- 🤖 AI/ML integration in web applications
-- 📊 Advanced data visualization techniques
-- 🚀 Startup methodologies and rapid prototyping
-
-## 💭 Fun Facts
-
-```python
-def fun_facts():
-    return {
-        "coffee_per_day": "∞",
-        "favorite_IDE": "VS Code with tons of extensions",
-        "debugging_soundtrack": "Lo-fi hip hop",
-        "side_projects": "Private repos with crazy experiments 🔬",
-        "dream": "Build a unicorn startup that changes lives 🦄"
-    }
-```
-
-## 📊 GitHub Stats
-
 <div align="center">
+  <h2>📊 GitHub Stats</h2>
   <img src="https://github-readme-stats.vercel.app/api?username=augusto-luzzi&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
 </div>
 
-## 🤝 Let's Connect!
-
-I'm always excited to collaborate on innovative projects, discuss tech trends, or help solve that impossible bug! 
+---
 
 <div align="center">
   
+  ### 🤝 Let's Connect! / Vamos Conectar!
+  
   **Open to opportunities where I can combine full-stack development with my passion for data and innovation**
   
-  📫 **Reach out:** [LinkedIn](https://www.linkedin.com/in/augusto-luzzi/) | [Email](mailto:seu-email@example.com)
+  **Aberto a oportunidades onde posso combinar desenvolvimento full-stack com minha paixão por dados e inovação**
+  
+  📫 **Reach out / Entre em contato:** [LinkedIn](https://www.linkedin.com/in/augusto-luzzi/) | [Email](mailto:seu-email@example.com)
   
   ---
   
   <img src="https://komarev.com/ghpvc/?username=augusto-luzzi&color=6C63FF&style=flat-square&label=Profile+Views" alt="Profile views" />
   
-</div>
-
-<div align="center">
   <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/notepad.gif" alt="Site created with Notepad" height="30" />
   <span>&nbsp;&nbsp;</span>
   <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with Love" height="30" />
+  
 </div>
