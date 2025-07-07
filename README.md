@@ -1,347 +1,237 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Augusto Luzzi - Software Engineer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(120deg, #6C63FF, #61DAFB);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .language-toggle {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .lang-btn {
-            padding: 8px 20px;
-            border: 2px solid #6C63FF;
-            background: transparent;
-            color: #6C63FF;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-        
-        .lang-btn.active {
-            background: #6C63FF;
-            color: white;
-        }
-        
-        .lang-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .social-link {
-            padding: 10px 20px;
-            background: #238636;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background: #2ea043;
-            transform: translateY(-2px);
-        }
-        
-        .code-block {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: 'Consolas', 'Monaco', monospace;
-            overflow-x: auto;
-        }
-        
-        .section {
-            margin: 40px 0;
-        }
-        
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .tech-category {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 20px;
-        }
-        
-        .tech-category h3 {
-            color: #6C63FF;
-            margin-bottom: 15px;
-        }
-        
-        .tech-badge {
-            display: inline-block;
-            padding: 5px 10px;
-            margin: 5px;
-            background: #30363d;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-        
-        .quote {
-            font-size: 1.2em;
-            font-style: italic;
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            border-left: 4px solid #6C63FF;
-            background: #161b22;
-        }
-        
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .highlight-item {
-            background: #161b22;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid #6C63FF;
-        }
-        
-        .stats {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .stats img {
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .section {
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        /* Typing animation */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-        
-        .typing-text {
-            overflow: hidden;
-            border-right: 3px solid #6C63FF;
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
-            margin: 0 auto;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .tech-stack { grid-template-columns: 1fr; }
-            .highlights { grid-template-columns: 1fr; }
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #30363d;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Augusto Luzzi</h1>
-            <p class="subtitle" data-en="Full-Stack Engineer | Data Enthusiast" data-pt="Engenheiro Full-Stack | Entusiasta de Dados">Full-Stack Engineer | Data Enthusiast</p>
-            
-            <div class="language-toggle">
-                <button class="lang-btn active" onclick="setLanguage('en')">🇺🇸 English</button>
-                <button class="lang-btn" onclick="setLanguage('pt')">🇧🇷 Português</button>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/augusto-luzzi/" class="social-link">LinkedIn</a>
-                <a href="https://github.com/augrumph" class="social-link">GitHub</a>
-                <a href="mailto:seu-email@example.com" class="social-link">Email</a>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 data-en="🎯 TL;DR" data-pt="🎯 Resumo">🎯 TL;DR</h2>
-            <div class="code-block">
-<pre><code>const augusto = {
-  <span data-en='role: "Software Engineer @ Grupo Marista"' data-pt='cargo: "Engenheiro de Software @ Grupo Marista"'>role: "Software Engineer @ Grupo Marista"</span>,
-  <span data-en='location: "Curitiba, PR 🇧🇷"' data-pt='localização: "Curitiba, PR 🇧🇷"'>location: "Curitiba, PR 🇧🇷"</span>,
-  <span data-en='experience: "2+ years"' data-pt='experiência: "2+ anos"'>experience: "2+ years"</span>,
-  <span data-en='mindset: "Startup-oriented 🚀"' data-pt='mentalidade: "Orientado a startups 🚀"'>mindset: "Startup-oriented 🚀"</span>,
-  <span data-en='superpower: "Connecting engineering with data insights 📊"' data-pt='superpoder: "Conectar engenharia com insights de dados 📊"'>superpower: "Connecting engineering with data insights 📊"</span>,
-  <span data-en='currentlyLearning: "Cloud-native architectures"' data-pt='estudandoAtualmente: "Arquiteturas cloud-native"'>currentlyLearning: "Cloud-native architectures"</span>,
-  <span data-en='lookingFor: "Opportunities to combine full-stack dev with data innovation"' data-pt='procurando: "Oportunidades para combinar dev full-stack com inovação em dados"'>lookingFor: "Opportunities to combine full-stack dev with data innovation"</span>
-};</code></pre>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 data-en="💫 About Me" data-pt="💫 Sobre Mim">💫 About Me</h2>
-            <div class="quote">
-                <p data-en='"While most devs deliver code, I deliver intelligence."' data-pt='"Enquanto a maioria dos devs entrega código, eu entrego inteligência."'>"While most devs deliver code, I deliver intelligence."</p>
-            </div>
-            <p data-en="Started my journey in Data Science at BRF, where I discovered my superpower: connecting engineering and data analysis. Today, I build web and mobile applications that don't just work — they generate insights that impact thousands of users." 
-               data-pt="Comecei minha jornada em Data Science na BRF, onde descobri meu superpoder: conectar engenharia e análise de dados. Hoje, desenvolvo aplicações web e mobile que não apenas funcionam — elas geram insights que impactam milhares de usuários.">
-                Started my journey in Data Science at BRF, where I discovered my superpower: connecting engineering and data analysis. Today, I build web and mobile applications that don't just work — they generate insights that impact thousands of users.
-            </p>
-        </div>
-        
-        <div class="section">
-            <h2 data-en="🏆 Highlights" data-pt="🏆 Destaques">🏆 Highlights</h2>
-            <div class="highlights">
-                <div class="highlight-item">
-                    <strong>🥇</strong> <span data-en="Winner - HIPUC Health Innovation Hackathon" data-pt="Vencedor - Hackathon HIPUC de Inovação em Saúde">Winner - HIPUC Health Innovation Hackathon</span>
-                </div>
-                <div class="highlight-item">
-                    <strong>👔</strong> <span data-en="VP - Software Engineering Academic Center (2 years)" data-pt="VP - Centro Acadêmico de Engenharia de Software (2 anos)">VP - Software Engineering Academic Center (2 years)</span>
-                </div>
-                <div class="highlight-item">
-                    <strong>🚀</strong> <span data-en="Active Member - PUCPR-SPINE Entrepreneurship Hub" data-pt="Membro Ativo - Núcleo de Empreendedorismo PUCPR-SPINE">Active Member - PUCPR-SPINE Entrepreneurship Hub</span>
-                </div>
-                <div class="highlight-item">
-                    <strong>📊</strong> <span data-en="Data Background - Transforming metrics into business decisions" data-pt="Background em Dados - Transformando métricas em decisões de negócio">Data Background - Transforming metrics into business decisions</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>🛠️ Tech Stack</h2>
-            <div class="tech-stack">
-                <div class="tech-category">
-                    <h3>Frontend</h3>
-                    <span class="tech-badge">React.js</span>
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">HTML5</span>
-                    <span class="tech-badge">CSS3</span>
-                </div>
-                <div class="tech-category">
-                    <h3>Backend</h3>
-                    <span class="tech-badge">Java</span>
-                    <span class="tech-badge">Spring Boot</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">Python</span>
-                </div>
-                <div class="tech-category">
-                    <h3>Data & Analytics</h3>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">SQL Server</span>
-                    <span class="tech-badge">Power BI</span>
-                </div>
-                <div class="tech-category">
-                    <h3>Cloud & DevOps</h3>
-                    <span class="tech-badge">Azure</span>
-                    <span class="tech-badge">Azure DevOps</span>
-                    <span class="tech-badge">Git</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p data-en="Open to opportunities where I can combine full-stack development with my passion for data and innovation" 
-               data-pt="Aberto a oportunidades onde posso combinar desenvolvimento full-stack com minha paixão por dados e inovação">
-                Open to opportunities where I can combine full-stack development with my passion for data and innovation
-            </p>
-            <p style="margin-top: 20px; opacity: 0.7;">Made with 💜 by Augusto Luzzi</p>
-        </div>
-    </div>
-    
-    <script>
-        function setLanguage(lang) {
-            // Update button states
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            // Update all elements with language data
-            document.querySelectorAll('[data-en][data-pt]').forEach(element => {
-                element.textContent = element.getAttribute(`data-${lang}`);
-            });
-            
-            // Save preference
-            localStorage.setItem('preferredLanguage', lang);
-        }
-        
-        // Load saved language preference
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            if (savedLang === 'pt') {
-                document.querySelectorAll('.lang-btn')[1].click();
-            }
-        });
-        
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+<div align="center">
+  
+  # Hey there! I'm Augusto Luzzi 👨‍💻✨
+  
+  ### 🌐 [English](#english) | [Português](#português)
+  
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=Full-Stack+Engineer+%7C+Data+Enthusiast;Building+Scalable+Solutions+%40+Grupo+Marista;React+%2B+TypeScript+%2B+Java+%2B+Python;Turning+Data+into+Decisions+%F0%9F%93%8A" alt="Typing SVG" />
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/augusto-luzzi/)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/augrumph)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seu-email@example.com)
+  
+</div>
+
+---
+
+<div id="english">
+
+## 🎯 TL;DR
+
+```javascript
+const augusto = {
+  role: "Software Engineer @ Grupo Marista",
+  location: "Curitiba, PR 🇧🇷",
+  experience: "2+ years",
+  mindset: "Startup-oriented 🚀",
+  superpower: "Connecting engineering with data insights 📊",
+  currentlyLearning: "Cloud-native architectures",
+  lookingFor: "Opportunities to combine full-stack dev with data innovation"
+};
+```
+
+## 💫 About Me
+
+> **"While most devs deliver code, I deliver intelligence."**
+
+Started my journey in **Data Science at BRF**, where I discovered my superpower: connecting engineering and data analysis. Today, I build web and mobile applications that don't just work — they generate insights that impact thousands of users.
+
+### 🏆 Highlights
+- 🥇 **Winner** - HIPUC Health Innovation Hackathon
+- 👔 **VP** - Software Engineering Academic Center (2 years)
+- 🚀 **Active Member** - PUCPR-SPINE Entrepreneurship Hub
+- 📊 **Data Background** - Transforming metrics into business decisions
+
+## 📈 What Makes Me Different
+
+```mermaid
+graph LR
+    A[Software Engineering] --> C[Unique Value]
+    B[Data Science Background] --> C
+    C --> D[Data-Driven Development]
+    D --> E[Business Impact Measurement]
+    D --> F[Feature Optimization]
+    D --> G[User Insight Generation]
+```
+
+## 🎓 Education & Achievements
+
+- **B.S. Software Engineering** - PUCPR (2020-2023) | GPA: 10/10 🎯
+- **Leadership** - VP of Academic Center, organizing tech events & workshops
+- **Innovation** - Hackathon winner focusing on healthcare solutions
+- **Community** - Active in entrepreneurship initiatives and tech talks
+
+## 💼 Professional Journey
+
+### Software Engineer @ Grupo Marista
+*Sep 2023 - Present*
+- Building scalable web and mobile applications impacting thousands of users
+- Full-stack development with Java Spring Boot, Node.js, React.js
+- Implementing CI/CD pipelines with Azure DevOps
+- Creating data-driven dashboards and KPIs with Power BI
+
+### Previous Experience
+- **Software Engineering Intern** @ Grupo Marista (Sep 2022 - Sep 2023)
+- **Data Science Intern** @ BRF (Aug 2021 - Feb 2022)
+
+## 🌱 Currently Exploring
+
+- 🏗️ Cloud-native architectures and microservices
+- 🤖 AI/ML integration in web applications
+- 📊 Advanced data visualization techniques
+- 🚀 Startup methodologies and rapid prototyping
+
+## 💭 Fun Facts
+
+```python
+def fun_facts():
+    return {
+        "coffee_per_day": "∞",
+        "favorite_IDE": "VS Code with tons of extensions",
+        "debugging_soundtrack": "Lo-fi hip hop",
+        "side_projects": "Private repos with crazy experiments 🔬",
+        "dream": "Build a unicorn startup that changes lives 🦄"
+    }
+```
+
+</div>
+
+---
+
+<div id="português">
+
+## 🎯 Resumo
+
+```javascript
+const augusto = {
+  cargo: "Engenheiro de Software @ Grupo Marista",
+  localização: "Curitiba, PR 🇧🇷",
+  experiência: "2+ anos",
+  mentalidade: "Orientado a startups 🚀",
+  superpoder: "Conectar engenharia com insights de dados 📊",
+  estudandoAtualmente: "Arquiteturas cloud-native",
+  procurando: "Oportunidades para combinar dev full-stack com inovação em dados"
+};
+```
+
+## 💫 Sobre Mim
+
+> **"Enquanto a maioria dos devs entrega código, eu entrego inteligência."**
+
+Comecei minha jornada em **Data Science na BRF**, onde descobri meu superpoder: conectar engenharia e análise de dados. Hoje, desenvolvo aplicações web e mobile que não apenas funcionam — elas geram insights que impactam milhares de usuários.
+
+### 🏆 Destaques
+- 🥇 **Vencedor** - Hackathon HIPUC de Inovação em Saúde
+- 👔 **VP** - Centro Acadêmico de Engenharia de Software (2 anos)
+- 🚀 **Membro Ativo** - Núcleo de Empreendedorismo PUCPR-SPINE
+- 📊 **Background em Dados** - Transformando métricas em decisões de negócio
+
+## 📈 Meu Diferencial
+
+```mermaid
+graph LR
+    A[Engenharia de Software] --> C[Valor Único]
+    B[Background em Data Science] --> C
+    C --> D[Desenvolvimento Data-Driven]
+    D --> E[Medição de Impacto no Negócio]
+    D --> F[Otimização de Features]
+    D --> G[Geração de Insights de Usuários]
+```
+
+## 🎓 Formação & Conquistas
+
+- **Bacharelado em Engenharia de Software** - PUCPR (2020-2023) | Nota: 10/10 🎯
+- **Liderança** - VP do Centro Acadêmico, organizando eventos e workshops tech
+- **Inovação** - Vencedor de hackathon com foco em soluções de saúde
+- **Comunidade** - Ativo em iniciativas de empreendedorismo e palestras tech
+
+## 💼 Jornada Profissional
+
+### Engenheiro de Software @ Grupo Marista
+*Set 2023 - Presente*
+- Construindo aplicações web e mobile escaláveis impactando milhares de usuários
+- Desenvolvimento full-stack com Java Spring Boot, Node.js, React.js
+- Implementando pipelines CI/CD com Azure DevOps
+- Criando dashboards e KPIs orientados a dados com Power BI
+
+### Experiência Anterior
+- **Estagiário de Engenharia de Software** @ Grupo Marista (Set 2022 - Set 2023)
+- **Estagiário de Data Science** @ BRF (Ago 2021 - Fev 2022)
+
+## 🌱 Explorando Atualmente
+
+- 🏗️ Arquiteturas cloud-native e microsserviços
+- 🤖 Integração de AI/ML em aplicações web
+- 📊 Técnicas avançadas de visualização de dados
+- 🚀 Metodologias de startup e prototipagem rápida
+
+## 💭 Curiosidades
+
+```python
+def curiosidades():
+    return {
+        "cafés_por_dia": "∞",
+        "IDE_favorita": "VS Code com milhões de extensões",
+        "trilha_sonora_debug": "Lo-fi hip hop",
+        "projetos_paralelos": "Repos privados com experimentos loucos 🔬",
+        "sonho": "Construir uma startup unicórnio que mude vidas 🦄"
+    }
+```
+
+</div>
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Backend
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+### Data & Analytics
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+### Cloud & DevOps
+![Azure](https://img.shields.io/badge/Azure-0089D0?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white)
+![Git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+<div align="center">
+  <h2>📊 GitHub Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=augrumph&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+</div>
+
+---
+
+<div align="center">
+  
+  ### 🤝 Let's Connect! / Vamos Conectar!
+  
+  **Open to opportunities where I can combine full-stack development with my passion for data and innovation**
+  
+  **Aberto a oportunidades onde posso combinar desenvolvimento full-stack com minha paixão por dados e inovação**
+  
+  📫 **Reach out / Entre em contato:** [LinkedIn](https://www.linkedin.com/in/augusto-luzzi/) | [GitHub](https://github.com/augrumph) | [Email](mailto:seu-email@example.com)
+  
+  ---
+  
+  <img src="https://komarev.com/ghpvc/?username=augrumph&color=6C63FF&style=flat-square&label=Profile+Views" alt="Profile views" />
+  
+  <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/notepad.gif" alt="Site created with Notepad" height="30" />
+  <span>&nbsp;&nbsp;</span>
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with Love" height="30" />
+  
+</div>
