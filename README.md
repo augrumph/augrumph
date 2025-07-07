@@ -172,7 +172,7 @@ def curiosidades():
     return {
         "cafés_por_dia": "∞",
         "IDE_favorita": "VS Code com milhões de extensões",
-        "trilha_sonora_debug": "Lo-fi hip hop",
+        "trilha_sonora_debug": "Rock classico",
         "projetos_paralelos": "Repos privados com experimentos loucos 🔬",
         "sonho": "Construir uma startup unicórnio que mude vidas 🦄"
     }
